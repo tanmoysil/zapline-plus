@@ -107,24 +107,24 @@ if nargin == 0
     return
 end
 
-disp('Removing frequency artifacts using ZapLine with adaptations for automatic component selection and chunked data.')
-disp(' ')
-disp(' ')
-disp(' ')
-disp('---------------- PLEASE CITE ------------------')
-disp(' ')
-disp('Klug, M., & Kloosterman, N. A. (2022).Zapline-plus: A Zapline extension for automatic and adaptiveremoval of frequency-specific noise artifacts in M/EEG.')
-disp('Human Brain Mapping,1–16. https://doi.org/10.1002/hbm.25832')
-disp(' ')
-disp('-------------------- AND ---------------------')
-disp(' ')
-disp('de Cheveigne, A. (2020) ZapLine: a simple and effective method to remove power line artifacts.')
-disp('NeuroImage, 1, 1-13. https://doi.org/10.1016/j.neuroimage.2019.116356')
-disp(' ')
-disp('------------------ THANKS! -------------------')
-disp(' ')
-disp(' ')
-disp(' ')
+% disp('Removing frequency artifacts using ZapLine with adaptations for automatic component selection and chunked data.')
+% disp(' ')
+% disp(' ')
+% disp(' ')
+% disp('---------------- PLEASE CITE ------------------')
+% disp(' ')
+% disp('Klug, M., & Kloosterman, N. A. (2022).Zapline-plus: A Zapline extension for automatic and adaptiveremoval of frequency-specific noise artifacts in M/EEG.')
+% disp('Human Brain Mapping,1–16. https://doi.org/10.1002/hbm.25832')
+% disp(' ')
+% disp('-------------------- AND ---------------------')
+% disp(' ')
+% disp('de Cheveigne, A. (2020) ZapLine: a simple and effective method to remove power line artifacts.')
+% disp('NeuroImage, 1, 1-13. https://doi.org/10.1016/j.neuroimage.2019.116356')
+% disp(' ')
+% disp('------------------ THANKS! -------------------')
+% disp(' ')
+% disp(' ')
+% disp(' ')
 
 % if the input is a struct, e.g. another zaplineConfig output, create new varargin array with all struct fields to be
 % parsed like regular. this should allow perfect reproduction of the cleaning (except figBase)
@@ -900,9 +900,9 @@ while i_noisefreq <= length(noisefreqs)
             end
             subplot(60,40,pos);
             
-            plot(f(this_freq_idx_belownoise),mean(pxx_raw_log(this_freq_idx_belownoise,:),2),'color',grey,'linewidth',1.5);
+            plot(f(this_freq_idx_belownoise),mean(pxx_raw_log(this_freq_idx_belownoise,:),2),'color',red,'linewidth',1.5);
             hold on
-            plot(f(this_freq_idx_belownoise),mean(pxx_clean_log(this_freq_idx_belownoise,:),2),'color',green,'linewidth',1.5);
+            plot(f(this_freq_idx_belownoise),mean(pxx_clean_log(this_freq_idx_belownoise,:),2),'color',grey,'linewidth',1.5);
             legend({'raw data','clean data'},'edgecolor',[0.8 0.8 0.8]);
             set(gca,'ygrid','on','xgrid','on');
             set(gca,'yminorgrid','on')
